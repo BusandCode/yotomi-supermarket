@@ -3,7 +3,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { FaUser } from "react-icons/fa6";
 import { MdNavigateNext } from "react-icons/md";
 import Link from 'next/link';
-
+import { FaRegCopyright } from "react-icons/fa";
 
 const page = () => {
   return (
