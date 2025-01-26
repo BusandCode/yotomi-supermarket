@@ -15,8 +15,8 @@ const page = () => {
               <FaUser  className='bg-[#60D669] cursor-pointer bg-opacity-40 w-[36px] h-[36px] p-2 rounded-full' size={25}/>
             </div>
           </div>
-          <Link className='py-5 px-3' href="/">
-            <BiArrowBack className='text-[#000000]'/>
+          <Link className='py-5 px-3 max-w-fit' href="/">
+            <BiArrowBack className='text-[#000000]' size={25}/>
           </Link>
 
           <section>
