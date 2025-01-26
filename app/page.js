@@ -18,7 +18,7 @@ const page = () => {
 
     {/* Hero */}
     <div className='flex items-start justify-start '>
-        <h1 className='text-[#062C0C] text-[36px] font-semibold max-w-[237px] h-[135px]'>What are you<i className='text-[#1FAF38]'> ordering </i>from us today?</h1>
+        <h1 className='text-[#062C0C] text-[36px] font-semibold max-w-[237px] '>What are you<i className='text-[#1FAF38]'> ordering </i>from us today?</h1>
       </div>
       </section>
 
