@@ -40,9 +40,9 @@ const page = () => {
             {/* Description */}
             <div className='flex flex-col items-start gap-5 '>
               <h1 className='text-[#000000] font-semibold text-[15px]'>Egusi Soup</h1>
-              <p className='text-[11px] font-normal'>1 Pack + 2 Meat Pieces</p>
+              <p className='text-[11px] font-normal'>2 Packs + 2 Meat</p>
               <div className='flex items-center gap-3'>
-                <h2 className='text-[#1FAF38] text-[15px] font-normal'>N2000</h2>
+                <h2 className='text-[#1FAF38] text-[15px] font-normal'>N7000</h2>
                 <button className='bg-[#60D669] text-[#FFFFFF] px-[8px] text-[10px] py-[4px] rounded-[4px]'>Add to cart</button>
               </div>
             </div>
@@ -56,9 +56,9 @@ const page = () => {
             {/* Description */}
             <div className='flex flex-col items-start gap-5 '>
               <h1 className='text-[#000000] font-semibold text-[15px]'>Egusi Soup</h1>
-              <p className='text-[11px] font-normal'>1 Pack + 2 Meat Pieces</p>
+              <p className='text-[11px] font-normal'>3 Packs + 5 Meats + 1 Table Water</p>
               <div className='flex items-center gap-3'>
-                <h2 className='text-[#1FAF38] text-[15px] font-normal'>N2000</h2>
+                <h2 className='text-[#1FAF38] text-[15px] font-normal'>N10,000</h2>
                 <button className='bg-[#60D669] text-[#FFFFFF] px-[8px] text-[10px] py-[4px] rounded-[4px]'>Add to cart</button>
               </div>
             </div>
