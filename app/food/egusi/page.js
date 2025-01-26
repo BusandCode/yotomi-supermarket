@@ -18,9 +18,9 @@ const page = () => {
           </div>
 
 
-          <div className='flex items-center justify-between'>
+          <div className='flex items-center justify-between py-5 px-3'>
             {/* Description */}
-            <div className='flex flex-col items-start gap-3 py-5 px-3'>
+            <div className='flex flex-col items-start gap-3 '>
               <h1 className='text-[#000000] font-semibold text-[15px]'>Egusi Soup</h1>
               <p className='text-[11px]'>1 Pack + 2 Meat Pieces</p>
               <div className='flex items-center gap-3'>
