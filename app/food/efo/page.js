@@ -67,7 +67,7 @@ const page = () => {
 
             {/* Image */}
             <div>
-            <img src="efo.jpg" alt="Efo" width={200} height={200} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
+            <img src="/efo.jpg" alt="Efo" width={200} height={200} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
             </div>
           </div>
           </section>
