@@ -35,7 +35,7 @@ const page = () => {
 
             {/* Image */}
             <div>
-            <img src="/Efo.jpg" alt="Efo" width={200} height={200} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
+            <img src="/efo.jpg" alt="Efo" width={200} height={200} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
             </div>
           </div>
           <div className='flex items-center justify-between py-5 px-3'>
@@ -51,7 +51,7 @@ const page = () => {
 
             {/* Image */}
             <div>
-            <img src="/Efo.jpg" alt="Efo" width={200} height={200} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
+            <img src="/efo.jpg" alt="Efo" width={200} height={200} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
             </div>
           </div>
           <div className='flex items-center justify-between py-5 px-3'>
@@ -67,7 +67,7 @@ const page = () => {
 
             {/* Image */}
             <div>
-            <img src="/Efo.jpg" alt="Efo" width={200} height={200} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
+            <img src="/efo.jpg" alt="Efo" width={200} height={200} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
             </div>
           </div>
           </section>
