@@ -1,4 +1,3 @@
-// import { Geist, Geist_Mono } from "next/font/google";
 import { Poppins } from 'next/font/google';
 import "./globals.css";
 
@@ -22,20 +21,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-// 
-    
-
-//     export const metadata = {
-//       title: 'Page Title',
-//       description: 'Page Description',
-//     }
-    
-//     export default function RootLayout({ children }) {
-//       return (
-//   {/*use classNam not variable*/}
-//         <html >
-//           <body>{children}</body>
-//         </html>
-//       )
-//     }

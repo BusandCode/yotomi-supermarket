@@ -2,6 +2,8 @@ import React from 'react'
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { FaUser } from "react-icons/fa6";
 import { MdNavigateNext } from "react-icons/md";
+import Link from 'next/link';
+
 
 const page = () => {
   return (
@@ -24,14 +26,14 @@ const page = () => {
 
       {/* Items-List */}
     <div className='flex flex-col items-center gap-3 p-3'>
-      <div className='flex items-center justify-between cursor-pointer bg-[#DAF6DC] rounded-[8px] h-[60px] w-full p-8 hover:bg-[#60D669]'>
+      <Link href="/food/egusi" className='flex items-center justify-between cursor-pointer bg-[#DAF6DC] rounded-[8px] h-[60px] w-full p-8 hover:bg-[#60D669]'>
         <button className='text-[15px] font-medium text-[#062C0C]'>Egusi</button>
         <MdNavigateNext className='bg-[#E2F8E3] text-[#14AE5C] w-[24px] h-[24px] rounded-full' size={200}/>
-      </div>
-      <div className='flex items-center justify-between cursor-pointer bg-[#DAF6DC] rounded-[8px] h-[60px] w-full p-8 hover:bg-[#60D669]'>
+      </Link>
+      <Link href="/food/efo" className='flex items-center justify-between cursor-pointer bg-[#DAF6DC] rounded-[8px] h-[60px] w-full p-8 hover:bg-[#60D669]'>
         <button className='text-[15px] font-medium text-[#062C0C]'>Efo</button>
         <MdNavigateNext className='bg-[#E2F8E3] text-[#14AE5C] w-[24px] h-[24px] rounded-full' size={200}/>
-      </div>
+      </Link>
       <div className='flex items-center justify-between cursor-pointer bg-[#DAF6DC] rounded-[8px] h-[60px] w-full p-8 hover:bg-[#60D669]'>
         <button className='text-[15px] font-medium text-[#062C0C]'>Red Stew</button>
         <MdNavigateNext className='bg-[#E2F8E3] text-[#14AE5C] w-[24px] h-[24px] rounded-full' size={200}/>
