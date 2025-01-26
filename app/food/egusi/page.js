@@ -28,7 +28,7 @@ const page = () => {
               <p className='text-[13px] font-normal'>1 Pack + 2 Meat Pieces</p>
               <div className='flex items-center gap-3'>
                 <h2 className='text-[#1FAF38] text-[17px] font-normal'>N2000</h2>
-                <button className='bg-[#60D669] text-[#FFFFFF] px-[8px] text-[10px] py-[4px] rounded-[4px]'>Add to cart</button>
+                <button className='bg-[#60D669] text-[#FFFFFF] px-[8px] text-[12px] py-[4px] rounded-[4px]'>Add to cart</button>
               </div>
             </div>
 
@@ -44,7 +44,7 @@ const page = () => {
               <p className='text-[13px] font-normal'>2 Packs + 2 Meat</p>
               <div className='flex items-center gap-3'>
                 <h2 className='text-[#1FAF38] text-[17px] font-normal'>N7000</h2>
-                <button className='bg-[#60D669] text-[#FFFFFF] px-[8px] text-[10px] py-[4px] rounded-[4px]'>Add to cart</button>
+                <button className='bg-[#60D669] text-[#FFFFFF] px-[8px] text-[12px] py-[4px] rounded-[4px]'>Add to cart</button>
               </div>
             </div>
 
@@ -60,7 +60,7 @@ const page = () => {
               <p className='text-[13px] font-normal'>3 Packs + 5 Meats + 1 Table Water</p>
               <div className='flex items-center gap-3'>
                 <h2 className='text-[#1FAF38] text-[17px] font-normal'>N10,000</h2>
-                <button className='bg-[#60D669] text-[#FFFFFF] px-[8px] text-[10px] py-[4px] rounded-[4px]'>Add to cart</button>
+                <button className='bg-[#60D669] text-[#FFFFFF] px-[8px] text-[12px] py-[4px] rounded-[4px]'>Add to cart</button>
               </div>
             </div>
 
