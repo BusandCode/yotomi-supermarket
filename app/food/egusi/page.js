@@ -71,7 +71,7 @@ const page = () => {
           </section>
 
           
-          <div className='bg-[#60D669] w-full h-[41px] flex justify-center items-center'>
+          <div className='py-5 px-3 bg-[#60D669] w-full h-[41px] flex justify-center items-center'>
             <p className='text-[11px]'>Delivery runs from 6 :00 - 7:00 PM</p>
           </div>
 
