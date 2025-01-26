@@ -3,6 +3,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { FaUser } from "react-icons/fa6";
 import { BiArrowBack } from "react-icons/bi";
 import Link from 'next/link';
+import { FaCircleExclamation } from "react-icons/fa6";
 
 
 const page = () => {
@@ -71,8 +72,9 @@ const page = () => {
           </section>
 
           <section className='py-5 px-3'>
-          <div className='bg-[#60D669] text-center bg-opacity-25 py-4'>
-            <p className='text-[11px]'>Delivery runs from 6 :00 - 7:00 PM</p>
+          <div className='bg-[#60D669] flex justify-between items-center px-5 bg-opacity-25 py-4'>
+            <FaCircleExclamation className='text-[#60D669]' size={25}/>
+            <p className='text-[13px]'>Delivery runs from 6 :00 - 7:00 PM</p>
           </div>
           </section>
 
