@@ -72,7 +72,7 @@ const page = () => {
           </section>
 
           <section className='py-5 px-3'>
-          <div className='bg-[#60D669] flex justify-between items-center px-5 bg-opacity-25 py-4'>
+          <div className='bg-[#60D669] flex justify-start gap-5 items-center px-5 bg-opacity-25 py-4'>
             <FaCircleExclamation className='text-[#60D669]' size={25}/>
             <p className='text-[13px]'>Delivery runs from 6 :00 - 7:00 PM</p>
           </div>
