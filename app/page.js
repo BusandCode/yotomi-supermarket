@@ -34,10 +34,10 @@ const page = () => {
         <button className='text-[17px] font-medium text-[#062C0C]'>Efo</button>
         <MdNavigateNext className='bg-[#E2F8E3] text-[#14AE5C] w-[24px] h-[24px] rounded-full' size={200}/>
       </Link>
-      <div className='flex items-center justify-between cursor-pointer bg-[#DAF6DC] rounded-[8px] h-[60px] w-full p-8 hover:bg-[#60D669]'>
+      <Link href="/food/stew" className='flex items-center justify-between cursor-pointer bg-[#DAF6DC] rounded-[8px] h-[60px] w-full p-8 hover:bg-[#60D669]'>
         <button className='text-[17px] font-medium text-[#062C0C]'>Red Stew</button>
         <MdNavigateNext className='bg-[#E2F8E3] text-[#14AE5C] w-[24px] h-[24px] rounded-full' size={200}/>
-      </div>
+      </Link>
       <div className='flex items-center justify-between cursor-pointer bg-[#DAF6DC] rounded-[8px] h-[60px] w-full p-8 hover:bg-[#60D669] '>
         <button className='text-[17px] font-medium text-[#062C0C]'>Gbegiri & Ewedu</button>
         <MdNavigateNext className='bg-[#E2F8E3] text-[#14AE5C] w-[24px] h-[24px] rounded-full' size={200}/>
