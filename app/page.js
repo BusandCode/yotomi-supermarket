@@ -45,8 +45,9 @@ const page = () => {
     </div>
 
     {/* Footer */}
-    <div className='bg-[#60D669] max-w-[450px] w-full h-full  flex justify-between items-center  mt-12  rounded-tl-[30px] rounded-tr-[30px] p-5 text-[#062C0C]'>
-      <small>&copy; 2025, Yotomi</small>
+    {/* Footer */}
+    <div className='text-[11px] bg-[#60D669] bg-opacity-25 max-w-[450px] w-full h-[136px]  flex justify-between items-center  mt-12  rounded-tl-[30px] rounded-tr-[30px] p-5 text-[#062C0C]'>
+        <p>&copy; 2025, Yotomi</p>
         <div className='flex gap-5 items-center'>
           <a href="">Contact Us</a>
           <a href="">About Us</a>

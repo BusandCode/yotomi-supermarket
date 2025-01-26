@@ -70,13 +70,14 @@ const page = () => {
           </div>
           </section>
 
-          
-          <div className='py-5 px-3 bg-[#60D669] w-full h-[41px] flex justify-center items-center'>
+          <section className='py-5 px-3'>
+          <div className='bg-[#60D669] text-center bg-opacity-25 py-4'>
             <p className='text-[11px]'>Delivery runs from 6 :00 - 7:00 PM</p>
           </div>
+          </section>
 
           {/* Footer */}
-          <div className='text-[11px] bg-[#60D669] max-w-[450px] w-full h-[136px]  flex justify-between items-center  mt-12  rounded-tl-[30px] rounded-tr-[30px] p-5 text-[#062C0C]'>
+          <div className='text-[11px] bg-[#60D669] bg-opacity-25 max-w-[450px] w-full h-[136px]  flex justify-between items-center  mt-12  rounded-tl-[30px] rounded-tr-[30px] p-5 text-[#062C0C]'>
         <p>&copy; 2025, Yotomi</p>
         <div className='flex gap-5 items-center'>
           <a href="">Contact Us</a>
