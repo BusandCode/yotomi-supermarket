@@ -12,10 +12,11 @@ const page = () => {
             <p className="font-bold text-[15px]">Cart</p>
           </Link>
 
-          <div>
+          <div className="flex flex-col gap-2 items-center">
             <PiShoppingCartSimpleFill
             //   size={30}
               className="text-[#60D669]  p-4 bg-[#EFFBF0] rounded-full w-[200px] mx-auto h-[200px]"/>
+              <p className="text-[#062C0C] font-medium text-[15px]">Your cart is empty!</p>
           </div>
 
           <Link href="/" className='py-5 px-3 cursor-pointer'>
