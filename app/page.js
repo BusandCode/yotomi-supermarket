@@ -7,6 +7,7 @@ import { FaBars } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 import Link from 'next/link';
 import { FaRegCopyright } from "react-icons/fa";
+import Draggable from './Draggable';
 
 const page = () => {
 
@@ -58,6 +59,8 @@ const page = () => {
         <h1 className='text-[#062C0C] text-[36px] font-semibold max-w-[300px] '>What are you<i className='text-[#1FAF38]'> ordering </i>from us today?</h1>
       </div>
       </section>
+
+      <Draggable />
 
       {/* Items-List */}
     <div className='flex flex-col items-center gap-3 p-3'>
