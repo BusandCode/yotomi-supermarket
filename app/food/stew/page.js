@@ -25,7 +25,7 @@ const page = () => {
           <div className='flex items-center justify-between py-5 px-3'>
             {/* Description */}
             <div className='flex flex-col items-start gap-5 '>
-              <h1 className='text-[#000000] font-semibold text-[17px]'>Efo Soup</h1>
+              <h1 className='text-[#000000] font-semibold text-[17px]'>Stew Soup</h1>
               <p className='text-[13px] font-normal'>1 Pack + 2 Meat Pieces</p>
               <div className='flex items-center gap-3'>
                 <h2 className='text-[#1FAF38] text-[17px] font-normal'>N2000</h2>
@@ -35,13 +35,13 @@ const page = () => {
 
             {/* Image */}
             <div>
-            <img src="/efo.jpg" alt="Efo" width={100} height={100} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
+            <img src="/stew.jpg" alt="Stew" width={100} height={100} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
             </div>
           </div>
           <div className='flex items-center justify-between py-5 px-3'>
             {/* Description */}
             <div className='flex flex-col items-start gap-5 '>
-              <h1 className='text-[#000000] font-semibold text-[17px]'>Efo Soup</h1>
+              <h1 className='text-[#000000] font-semibold text-[17px]'>Stew Soup</h1>
               <p className='text-[13px] font-normal'>2 Packs + 2 Meat</p>
               <div className='flex items-center gap-3'>
                 <h2 className='text-[#1FAF38] text-[17px] font-normal'>N7000</h2>
@@ -51,13 +51,13 @@ const page = () => {
 
             {/* Image */}
             <div>
-            <img src="/efo.jpg" alt="Efo" width={100} height={100} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
+            <img src="/stew.jpg" alt="Stew" width={100} height={100} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
             </div>
           </div>
           <div className='flex items-center justify-between py-5 px-3'>
             {/* Description */}
             <div className='flex flex-col items-start gap-5 '>
-              <h1 className='text-[#000000] font-semibold text-[17px]'>Efo Soup</h1>
+              <h1 className='text-[#000000] font-semibold text-[17px]'>Stew Soup</h1>
               <p className='text-[13px] font-normal'>3 Packs + 5 Meats + 1 Table Water</p>
               <div className='flex items-center gap-3'>
                 <h2 className='text-[#1FAF38] text-[17px] font-normal'>N10,000</h2>
@@ -67,7 +67,7 @@ const page = () => {
 
             {/* Image */}
             <div>
-            <img src="/efo.jpg" alt="Efo" width={100} height={100} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
+            <img src="/stew.jpg" alt="Stew" width={100} height={100} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
             </div>
           </div>
           </section>
