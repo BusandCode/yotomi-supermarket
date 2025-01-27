@@ -18,7 +18,7 @@ const page = () => {
             </div>
           </div>
           <Link className='py-5 px-3 max-w-fit' href="/">
-            <BiArrowBack className='text-[#000000]' size={25}/>
+            <BiArrowBack className='text-[#000000] bg-[#60D669] bg-opacity-40 p-2 rounded-full w-[36px] h-[36px]' size={25}/>
           </Link>
 
           <section>
@@ -35,7 +35,7 @@ const page = () => {
 
             {/* Image */}
             <div>
-            <img src="/efo.jpg" alt="Efo" width={200} height={200} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
+            <img src="/efo.jpg" alt="Efo" width={100} height={100} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
             </div>
           </div>
           <div className='flex items-center justify-between py-5 px-3'>
@@ -51,7 +51,7 @@ const page = () => {
 
             {/* Image */}
             <div>
-            <img src="/efo.jpg" alt="Efo" width={200} height={200} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
+            <img src="/efo.jpg" alt="Efo" width={100} height={100} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
             </div>
           </div>
           <div className='flex items-center justify-between py-5 px-3'>
@@ -67,7 +67,7 @@ const page = () => {
 
             {/* Image */}
             <div>
-            <img src="/efo.jpg" alt="Efo" width={200} height={200} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
+            <img src="/efo.jpg" alt="Efo" width={100} height={100} className='w-[132px] h-[142px] bg-no-repeat rounded-[8px]'/>
             </div>
           </div>
           </section>
@@ -75,7 +75,7 @@ const page = () => {
           <section className='py-5 px-3'>
           <div className='bg-[#60D669] flex justify-start gap-5 items-center px-5 bg-opacity-25 py-4'>
             <FaCircleExclamation className='text-[#60D669]' size={25}/>
-            <p className='text-[13px]'>Delivery runs from 6 :00 - 7:00 PM</p>
+            <p className='text-[13px]'>Delivery runs from 6:00PM - 7:00PM</p>
           </div>
           </section>
 

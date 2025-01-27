@@ -18,7 +18,7 @@ const page = () => {
             </div>
           </div>
           <Link className='py-5 px-3 max-w-fit' href="/">
-            <BiArrowBack className='text-[#000000]' size={25}/>
+            <BiArrowBack className='text-[#000000] bg-[#60D669] bg-opacity-40 p-2 rounded-full w-[36px] h-[36px]' size={25}/>
           </Link>
 
           <section>
