@@ -13,7 +13,9 @@ const page = () => {
     <div className='flex justify-between items-center'>
       <h1 className='text-[30px] font-bold'><i>Yoto<span className='text-[#60D669]'>mi</span></i></h1>
       <div className='flex items-center gap-5 text-[#60D669]'>
+        <Link href="/food/cart">
         <HiOutlineShoppingCart className='cursor-pointer' size={25}/>
+        </Link>
         <FaUser  className='bg-[#60D669] cursor-pointer bg-opacity-40 w-[36px] h-[36px] p-2 rounded-full' size={25}/>
       </div>
     </div>
