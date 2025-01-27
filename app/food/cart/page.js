@@ -18,11 +18,11 @@ const page = () => {
               className="text-[#60D669]  p-4 bg-[#EFFBF0] rounded-full w-[200px] mx-auto h-[200px]"/>
           </div>
 
-          <div className='py-5 px-3 cursor-pointer'>
+          <Link href="/" className='py-5 px-3 cursor-pointer'>
         <div className='bg-[#60D669] flex justify-center gap-5 items-center rounded-[8px] px-5 bg-opacity-25 py-4'>
             <p className='text-[15px] text-[#062C0C]  font-medium'>Start Ordering</p>
         </div>
-        </div>
+        </Link>
 
     </div>
   )
