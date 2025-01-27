@@ -10,13 +10,15 @@ import { FaRegCopyright } from "react-icons/fa";
 const page = () => {
   return (
     <main className='max-w-[450px]  mx-auto flex flex-col  gap-5 h-full'>
-        <div className='flex justify-between items-center py-5 px-3'>
-            <h1 className='text-[30px] font-bold'><i>Yoto<span className='text-[#60D669]'>mi</span></i></h1>
-            <div className='flex items-center gap-5 text-[#60D669]'>
-              <HiOutlineShoppingCart className='cursor-pointer' size={25}/>
-              <FaUser  className='bg-[#60D669] cursor-pointer bg-opacity-40 w-[36px] h-[36px] p-2 rounded-full' size={25}/>
-            </div>
-          </div>
+       <div className='flex justify-between items-center'>
+      <h1 className='text-[30px] font-bold'><i>Yoto<span className='text-[#60D669]'>mi</span></i></h1>
+      <div className='flex items-center gap-5 text-[#60D669]'>
+        <Link href="/food/cart">
+        <HiOutlineShoppingCart className='cursor-pointer' size={25}/>
+        </Link>
+        <FaUser  className='bg-[#60D669] cursor-pointer bg-opacity-40 w-[36px] h-[36px] p-2 rounded-full' size={25}/>
+      </div>
+    </div>
           <Link className='py-5 px-3 max-w-fit' href="/">
             <BiArrowBack className='text-[#000000] bg-[#60D669] bg-opacity-40 p-2 rounded-full w-[36px] h-[36px]' size={25}/>
           </Link>
