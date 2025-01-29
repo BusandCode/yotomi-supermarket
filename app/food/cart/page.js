@@ -6,7 +6,7 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className="flex flex-col gap-20">
+    <div className="max-w-[450px] mx-auto flex flex-col gap-20">
         <Link className='py-5 px-3 max-w-fit flex gap-1 items-center' href="/">
             <BiArrowBack className='text-[#000000] p-2 rounded-full w-[36px] h-[36px]' size={25}/>
             <p className="font-bold text-[15px]">Cart</p>

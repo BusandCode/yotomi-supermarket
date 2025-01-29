@@ -11,7 +11,8 @@ import Draggable from './Draggable';
 
 const page = () => {
 
-  const [showMenu,setShowMenu] = useState(false)
+  const [showMenu,setShowMenu] = useState(false);
+  const [changeIcon,setChangeIcon] = useState(true);
 
   return (
     <main className='max-w-[450px] relative mx-auto flex flex-col  gap-5 h-full'>
@@ -23,31 +24,50 @@ const page = () => {
         <Link href="/food/cart">
         <HiOutlineShoppingCart className='cursor-pointer' size={25}/>
         </Link>
-        <FaBars className='text-[#062C0C] cursor-pointer' size={25} onClick={()=>{
-          setShowMenu(true)
-        }}/>
+
+        {changeIcon ? <FaBars className='text-[#062C0C] cursor-pointer' size={25} onClick={()=>{
+          setShowMenu(true);
+          setChangeIcon(false);
+        }}/> : <FaTimes className='text-[#062C0C] cursor-pointer' size={25}
+        onClick={()=>{
+         setShowMenu(false);
+         setChangeIcon(true);
+        }}
+        /> }
+        
+      
         {/* <FaUser  className='bg-[#60D669] cursor-pointer bg-opacity-40 w-[36px] h-[36px] p-2 rounded-full' size={25}/> */}
       </div>
     </div>
     {/* Menu */}
     {showMenu && 
      <nav
-     onMouseLeave={()=>{
-      setShowMenu(false)
+    className='bg-[#DAF6DC] flex flex-col items-start gap-2 w-3/4 min-h-screen transform translate-x-0 rounded-sm py-3 absolute z-[999] right-0 top-[70px]'>
+     <Link href="/" onClick={()=>{
+      setShowMenu(false);
+      setChangeIcon(true);
+      }}
+      className='hover:bg-[#60D669] w-full p-3 hover:text-white'>Order History</Link>
+     <Link href="/" onClick={()=>{
+      setShowMenu(false);
+      setChangeIcon(true);
      }}
-    className='bg-[#60D669] flex flex-col items-center gap-10  w-[75%] rounded-sm h-fit p-5 absolute z-[999] right-0 top-[70px]'>
-     <FaTimes className='text-[#062C0C] cursor-pointer' size={25}
-     onClick={()=>{
-      setShowMenu(false)
-     }}
-     />
-     <div className='text-[#062C0C]  text-[17px]  flex flex-col items-start justify-evenly gap-6'>
-     <Link href="/" onClick={()=>{setShowMenu(false)}}>Order History</Link>
-     <Link href="/" onClick={()=>{setShowMenu(false)}}>Track Order</Link>
-     <Link href="/" onClick={()=>{setShowMenu(false)}}>FAQ</Link>
-     <Link href="/" onClick={()=>{setShowMenu(false)}}>Contact Us</Link>
-     <Link href="/" onClick={()=>{setShowMenu(false)}}>About Us</Link>
-   </div>
+     className='hover:bg-[#60D669] w-full p-3 hover:text-white'>Track Order</Link>
+     <Link href="/" onClick={()=>{
+      setShowMenu(false);
+      setChangeIcon(true);
+      }}
+      className='hover:bg-[#60D669] w-full p-3 hover:text-white'>FAQ</Link>
+     <Link href="/" onClick={()=>{
+      setShowMenu(false);
+      setChangeIcon(true);
+      }}
+      className='hover:bg-[#60D669] w-full p-3 hover:text-white'>Contact Us</Link>
+     <Link href="/" onClick={()=>{
+      setShowMenu(false);
+      setChangeIcon(true);
+      }}
+      className='hover:bg-[#60D669] w-full p-3 hover:text-white'>About Us</Link>
    </nav>
     }
      
