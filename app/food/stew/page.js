@@ -1,20 +1,10 @@
 'use client'
 import React,{useState} from 'react'
-import { HiOutlineShoppingCart } from "react-icons/hi";
-// import { FaUser } from "react-icons/fa6";
-import { FaBars } from 'react-icons/fa6';
-import { FaTimes } from 'react-icons/fa';
 import { BiArrowBack } from "react-icons/bi";
 import Link from 'next/link';
 import { FaCircleExclamation } from "react-icons/fa6";
-import { FaRegCopyright } from "react-icons/fa";
-
-
 
 const page = () => {
-
-  const [showMenu,setShowMenu] = useState(false);
-  const [changeIcon,setChangeIcon] = useState(true);
   const [displayFirst,setDisplayFirst] = useState(true);
   const [displaySecond,setDisplaySecond] = useState(true);
   const [displayThird,setDisplayThird] = useState(true);
@@ -55,60 +45,7 @@ const page = () => {
   };
   return (
     <main className='max-w-[450px] relative mx-auto flex flex-col  gap-5 h-full'>
-      {/* Header */}
-    <div className='flex justify-between items-center bg-[#DAF6DC] px-5 py-3'>
-      <h1 className='text-[30px] font-bold'><i>Yoto<span className='text-[#60D669]'>mi</span></i></h1>
-      <div className='flex items-center gap-5 text-[#60D669]'>
-        <Link href="/food/cart">
-        <HiOutlineShoppingCart className='cursor-pointer' size={25}/>
-        </Link>
-
-        {changeIcon ? <FaBars className='text-[#062C0C] cursor-pointer' size={25} onClick={()=>{
-          setShowMenu(true);
-          setChangeIcon(false);
-        }}/> : <FaTimes className='text-[#062C0C] cursor-pointer' size={25}
-        onClick={()=>{
-         setShowMenu(false);
-         setChangeIcon(true);
-        }}
-        /> }
-        
-      
-        {/* <FaUser  className='bg-[#60D669] cursor-pointer bg-opacity-40 w-[36px] h-[36px] p-2 rounded-full' size={25}/> */}
-      </div>
-    </div>
-    {/* Menu */}
-    {showMenu && 
-     <nav
-    className='bg-[#DAF6DC] flex flex-col items-start gap-2 w-3/4 min-h-screen transform translate-x-0 rounded-sm absolute z-[999] right-0 top-[70px]'>
-     <Link href="/" onClick={()=>{
-      setShowMenu(false);
-      setChangeIcon(true);
-      }}
-      className='hover:bg-[#60D669] w-full p-3 hover:text-white'>Order History</Link>
-     <Link href="/" onClick={()=>{
-      setShowMenu(false);
-      setChangeIcon(true);
-     }}
-     className='hover:bg-[#60D669] w-full p-3 hover:text-white'>Track Order</Link>
-     <Link href="/" onClick={()=>{
-      setShowMenu(false);
-      setChangeIcon(true);
-      }}
-      className='hover:bg-[#60D669] w-full p-3 hover:text-white'>FAQ</Link>
-     <Link href="/" onClick={()=>{
-      setShowMenu(false);
-      setChangeIcon(true);
-      }}
-      className='hover:bg-[#60D669] w-full p-3 hover:text-white'>Contact Us</Link>
-     <Link href="/" onClick={()=>{
-      setShowMenu(false);
-      setChangeIcon(true);
-      }}
-      className='hover:bg-[#60D669] w-full p-3 hover:text-white'>About Us</Link>
-   </nav>
-    }
-      
+   
       <Link className='py-5 px-3 max-w-fit' href="/">
             <BiArrowBack className='text-[#000000] bg-[#60D669] bg-opacity-40 p-2 rounded-full w-[36px] h-[36px]' size={25}/>
           </Link>
@@ -203,15 +140,6 @@ const page = () => {
             <p className='text-[13px]'>Delivery runs from 6:00PM-7:00PM</p>
           </div>
           </section>
-
-          {/* Footer */}
-          <div className='text-[13px] bg-[#60D669] bg-opacity-25 max-w-[450px] w-full h-[136px]  flex justify-between items-center  mt-12  rounded-tl-[30px] rounded-tr-[30px] p-5 text-[#062C0C]'>
-        <p  className='flex items-center justify-center gap-1'><FaRegCopyright size={17}/> 2025, Yotomi</p>
-        <div className='flex gap-5 items-center'>
-          <a href="">Contact Us</a>
-          <a href="">About Us</a>
-        </div>
-    </div>
     </main>
   )
 }
