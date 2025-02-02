@@ -46,7 +46,7 @@ const page = () => {
     setThirdCart(thirdCart--)
   };
   return (
-    <main className='max-w-[450px] relative mx-auto flex flex-col  gap-5 h-full'>
+    <main className='lg:max-w-[900px] relative mx-auto flex flex-col  gap-5 h-full'>
       
       <Link className='py-5 px-3 max-w-fit' href="/">
             <BiArrowBack className='text-[#000000] bg-[#60D669] bg-opacity-40 p-2 rounded-full w-[36px] h-[36px]' size={25}/>

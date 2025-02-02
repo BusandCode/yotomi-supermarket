@@ -9,7 +9,7 @@ import Draggable from './Draggable';
 const page = () => {
 
   return (
-    <main className='max-w-[450px] relative mx-auto flex flex-col  gap-5 h-full'>
+    <main className=' max-w-[450px] relative mx-auto flex flex-col  gap-5 h-full'>
       <section className=' flex flex-col gap-10'>
 
     {/* Hero */}

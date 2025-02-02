@@ -6,6 +6,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import { FaBars } from 'react-icons/fa6';
 import { FaTimes } from 'react-icons/fa';
 
+
 const NavBar = () => {
     const [showMenu,setShowMenu] = useState(false);
     const [changeIcon,setChangeIcon] = useState(true);
@@ -57,7 +58,7 @@ const NavBar = () => {
       setChangeIcon(true);
       }}
       className='hover:bg-[#60D669] w-full p-3 hover:text-white'>Contact Us</Link>
-     <Link href="/" onClick={()=>{
+     <Link href="/pages/about" onClick={()=>{
       setShowMenu(false);
       setChangeIcon(true);
       }}
