@@ -53,7 +53,7 @@ const NavBar = () => {
       setChangeIcon(true);
       }}
       className='hover:bg-[#60D669] w-full p-3 hover:text-white'>FAQ</Link>
-     <Link href="/" onClick={()=>{
+     <Link href="/pages/contact" onClick={()=>{
       setShowMenu(false);
       setChangeIcon(true);
       }}
