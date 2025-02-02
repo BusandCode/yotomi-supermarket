@@ -38,7 +38,7 @@ const NavBar = () => {
     {showMenu && 
      <nav
     className='bg-[#DAF6DC] flex flex-col items-start gap-2 w-3/4 min-h-screen transform translate-x-0 rounded-sm absolute z-[999] right-0 top-[70px]'>
-     <Link href="/" onClick={()=>{
+     <Link href="/pages/order-history" onClick={()=>{
       setShowMenu(false);
       setChangeIcon(true);
       }}
@@ -48,7 +48,7 @@ const NavBar = () => {
       setChangeIcon(true);
      }}
      className='hover:bg-[#60D669] w-full p-3 hover:text-white'>Track Order</Link>
-     <Link href="/" onClick={()=>{
+     <Link href="/pages/FAQ" onClick={()=>{
       setShowMenu(false);
       setChangeIcon(true);
       }}
