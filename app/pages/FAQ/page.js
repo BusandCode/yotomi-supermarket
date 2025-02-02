@@ -1,8 +1,11 @@
 "use client"
 
+import { BiArrowBack } from "react-icons/bi";
+import Link from 'next/link'
 import React, { useState } from 'react';
 import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
-import { ChevronLeft, ChevronDown, Search, MessageCircle } from 'lucide-react';
+import { ChevronDown, Search, MessageCircle } from 'lucide-react';
+
 
 // Wrapper component to provide Router context
 const FAQWrapper = () => (
@@ -76,14 +79,12 @@ const FAQ = () => {
   return (
     <div className="max-w-[450px] mx-auto flex flex-col  gap-5 h-full">
       <header className="bg-white shadow-sm">
-        <div className="max-w-4xl mx-auto px-4 py-4 flex items-center">
-          <button 
-            onClick={() => navigate(-1)}
-            className="p-2 rounded-full hover:bg-gray-100 transition-colors"
-          >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-          <h1 className="text-2xl font-semibold ml-4">Frequently Asked Questions</h1>
+        <div className="flex items-center">
+        <Link className='py-5 px-3 max-w-fit' href="/">
+            <BiArrowBack className='text-[#000000] bg-[#60D669] bg-opacity-40 p-2 rounded-full w-[36px] h-[36px]' size={25}/>
+          </Link>
+            {/* <ChevronLeft className="w-6 h-6" /> */}
+          <h1 className="text-xl font-semibold ml-4">Frequently Asked Questions</h1>
         </div>
       </header>
 
