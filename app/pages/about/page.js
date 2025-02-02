@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const page = () => {
   return (
-    <div className='max-w-[450px] relative mx-auto h-full flex flex-col gap-5 justify-center items-start mt-20'>
+    <div className='max-w-[450px] p-3 relative mx-auto h-full flex flex-col gap-5 justify-center items-start mt-20'>
 
         <Link className='py-5 px-3 max-w-fit' href="/">
             <BiArrowBack className='text-[#000000] bg-[#60D669] bg-opacity-40 p-2 rounded-full w-[36px] h-[36px]' size={25}/>
