@@ -13,7 +13,7 @@ const Checkout = () => {
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem('cart') || '[]');
     if (savedCart.length === 0) {
-      window.location.href = '/pages/cart';
+      window.location.href = '/components/cart';
       return;
     }
     setCart(savedCart);
@@ -89,7 +89,7 @@ const Checkout = () => {
 
     // Simulate processing delay
     // setTimeout(() => {
-    //   window.location.href = '/pages/payment';
+    //   window.location.href = '/components/payment';
     // }, 1000);
   };
 

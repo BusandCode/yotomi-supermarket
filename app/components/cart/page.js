@@ -63,7 +63,7 @@ const page = () => {
       alert('Your cart is empty!');
       return;
     }
-    window.location.href = '/pages/checkout?type=delivery';
+    window.location.href = '/components/checkout?type=delivery';
   };
 
   const openWhatsApp = () => {
