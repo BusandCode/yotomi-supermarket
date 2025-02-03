@@ -337,9 +337,10 @@ const MenuEfo = () => {
           );
         })}
       </main>
-
+      <div className='p-5'>
       <div className="bg-[#60D669] flex justify-center gap-5 mt-10 items-center px-5 bg-opacity-25 py-4 rounded-[4px]">
         <p className='text-center'>⚠️ Delivery runs from 6:00 - 7:00 PM</p>
+      </div>
       </div>
     </div>
   );

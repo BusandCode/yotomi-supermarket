@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { Phone, AlertTriangle, Eye, EyeOff, X } from 'lucide-react';
+import { AlertTriangle, Eye, EyeOff, X } from 'lucide-react';
 
 const Checkout = () => {
   const [cart, setCart] = useState([]);
@@ -13,7 +13,7 @@ const Checkout = () => {
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem('cart') || '[]');
     if (savedCart.length === 0) {
-      window.location.href = '/cart';
+      window.location.href = '/pages/cart';
       return;
     }
     setCart(savedCart);
@@ -66,31 +66,31 @@ const Checkout = () => {
     setLoading(true);
 
     const phoneDigits = phone.replace(/\D/g, '');
-    const pin = phoneDigits.slice(-5);
+    // const pin = phoneDigits.slice(-5);
 
-    const order = {
-      id: Date.now().toString(),
-      items: cart,
-      phone,
-      address,
-      pin,
-      status: 'pending',
-      timestamp: new Date().toISOString(),
-      total: `₦${subtotal.toLocaleString()}`,
-      paymentStatus: 'pending',
-      deliveryStatus: 'pending'
-    };
+    // const order = {
+    //   id: Date.now().toString(),
+    //   items: cart,
+    //   phone,
+    //   address,
+    //   pin,
+    //   status: 'pending',
+    //   timestamp: new Date().toISOString(),
+    //   total: `₦${subtotal.toLocaleString()}`,
+    //   // paymentStatus: 'pending',
+    //   deliveryStatus: 'pending'
+    // };
     
     // Save order to localStorage
-    const orders = JSON.parse(localStorage.getItem('orders') || '[]');
-    orders.push(order);
-    localStorage.setItem('orders', JSON.stringify(orders));
-    localStorage.setItem('currentOrder', JSON.stringify(order));
+    // const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+    // orders.push(order);
+    // localStorage.setItem('orders', JSON.stringify(orders));
+    // localStorage.setItem('currentOrder', JSON.stringify(order));
 
     // Simulate processing delay
-    setTimeout(() => {
-      window.location.href = '/pages/payment';
-    }, 1000);
+    // setTimeout(() => {
+    //   window.location.href = '/pages/payment';
+    // }, 1000);
   };
 
   const openWhatsApp = () => {
@@ -101,14 +101,14 @@ const Checkout = () => {
     window.history.back();
   };
 
-  if (loading) {
-    return (
-      <div className="fixed inset-0 bg-white/90 flex flex-col items-center justify-center gap-4 z-50">
-        <div className="w-10 h-10 border-4 border-[#E8F5E9] border-t-[#60D669] rounded-full animate-spin" />
-        <p className="text-[#062C0C] text-base">Processing your order...</p>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="fixed inset-0 bg-white/90 flex flex-col items-center justify-center gap-4 z-50">
+  //       <div className="w-10 h-10 border-4 border-[#E8F5E9] border-t-[#60D669] rounded-full animate-spin" />
+  //       <p className="text-[#062C0C] text-base">Processing your order...</p>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="max-w-[450px] capitalize mx-auto min-h-screen bg-white text-[#062C0C]">
@@ -157,7 +157,7 @@ const Checkout = () => {
             />
           </div>
 
-          <div className="space-y-2">
+          {/* <div className="space-y-2">
             <label className="block text-base">Your Order Pin is Your Phone-Number Last 5 Digits</label>
             <div className="flex items-center gap-3">
               <div className="flex-1 flex gap-2">
@@ -179,7 +179,7 @@ const Checkout = () => {
                 {showPin ? <EyeOff className="w-6 h-6 opacity-70" /> : <Eye className="w-6 h-6 opacity-70" />}
               </button>
             </div>
-          </div>
+          </div> */}
 
           {error && (
             <div className="text-red-500 text-sm">{error}</div>
@@ -203,19 +203,20 @@ const Checkout = () => {
           </div>
 
           <div className="flex gap-3 mt-8">
-            <button
+            {/* <button
               type="button"
-              onClick={openWhatsApp}
+              
               className="w-12 h-12 border-2 border-[#60D669] bg-transparent rounded-lg flex items-center justify-center"
             >
               <Phone className="w-6 h-6" />
-            </button>
+            </button> */}
             <button
-              type="submit"
+              onClick={openWhatsApp}
               className="flex-1 h-12 bg-[#60D669] text-white border-0 rounded-lg text-base font-semibold"
             >
               CONFIRM ORDER
             </button>
+
           </div>
         </form>
       </main>
