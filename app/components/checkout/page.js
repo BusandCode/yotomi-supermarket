@@ -1,12 +1,11 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import { AlertTriangle, Eye, EyeOff, X } from 'lucide-react';
+import { AlertTriangle, X } from 'lucide-react';
 
 const Checkout = () => {
   const [cart, setCart] = useState([]);
   const [address, setAddress] = useState('');
   const [phone, setPhone] = useState('');
-  const [showPin, setShowPin] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -56,59 +55,70 @@ const Checkout = () => {
     return true;
   };
 
-  const processOrder = async (e) => {
-    e.preventDefault();
+  const formatOrderForWhatsApp = () => {
+    const orderDate = new Date().toLocaleDateString();
+    const orderTime = new Date().toLocaleTimeString();
     
+    let message = `🛍️ *New Order* (${orderDate} ${orderTime})\n\n`;
+    message += `📍 *Delivery Address:*\n${address}\n\n`;
+    message += `📱 *Phone:*\n${phone}\n\n`;
+    message += `🛒 *Order Details:*\n`;
+    
+    cart.forEach(item => {
+      message += `- ${item.quantity}x ${item.name} @ ₦${item.price.toLocaleString()} = ₦${(item.price * item.quantity).toLocaleString()}\n`;
+    });
+    
+    message += `\n💰 *Total Amount:* ₦${subtotal.toLocaleString()}\n`;
+    message += `🚚 *Delivery:* FREE\n`;
+    message += `\n*Grand Total:* ₦${subtotal.toLocaleString()}`;
+    
+    return encodeURIComponent(message);
+  };
+
+  const openWhatsApp = () => {
     if (!validateForm()) {
       return;
     }
 
     setLoading(true);
-
-    const phoneDigits = phone.replace(/\D/g, '');
-    // const pin = phoneDigits.slice(-5);
-
-    // const order = {
-    //   id: Date.now().toString(),
-    //   items: cart,
-    //   phone,
-    //   address,
-    //   pin,
-    //   status: 'pending',
-    //   timestamp: new Date().toISOString(),
-    //   total: `₦${subtotal.toLocaleString()}`,
-    //   // paymentStatus: 'pending',
-    //   deliveryStatus: 'pending'
-    // };
+    const messageText = formatOrderForWhatsApp();
+    const whatsappURL = `https://wa.me/2348038701309?text=${messageText}`;
     
-    // Save order to localStorage
-    // const orders = JSON.parse(localStorage.getItem('orders') || '[]');
-    // orders.push(order);
-    // localStorage.setItem('orders', JSON.stringify(orders));
-    // localStorage.setItem('currentOrder', JSON.stringify(order));
-
-    // Simulate processing delay
-    // setTimeout(() => {
-    //   window.location.href = '/components/payment';
-    // }, 1000);
-  };
-
-  const openWhatsApp = () => {
-    window.open('https://wa.me/2348038701309', '_blank');
+    // Save order to localStorage before redirecting
+    const order = {
+      id: Date.now().toString(),
+      items: cart,
+      phone,
+      address,
+      status: 'pending',
+      timestamp: new Date().toISOString(),
+      total: `₦${subtotal.toLocaleString()}`,
+      deliveryStatus: 'pending'
+    };
+    
+    const orders = JSON.parse(localStorage.getItem('orders') || '[]');
+    orders.push(order);
+    localStorage.setItem('orders', JSON.stringify(orders));
+    
+    // Clear cart after order is placed
+    localStorage.setItem('cart', '[]');
+    
+    window.open(whatsappURL, '_blank');
+    setLoading(false);
   };
 
   const goBack = () => {
     window.history.back();
   };
 
-  // if (loading) {
-  //   return (
-  //     <div className="fixed inset-0 bg-white/90 flex flex-col items-center justify-center gap-4 z-50">
-  //       <div className="w-10 h-10 border-4 border-[#E8F5E9] border-t-[#60D669] rounded-full animate-spin" />
-  //       <p className="text-[#062C0C] text-base">Processing your order...</p>
-  //     </div>
-  //   );
-  // }
+  if (loading) {
+    return (
+      <div className="fixed inset-0 bg-white/90 flex flex-col items-center justify-center gap-4 z-50">
+        <div className="w-10 h-10 border-4 border-[#E8F5E9] border-t-[#60D669] rounded-full animate-spin" />
+        <p className="text-[#062C0C] text-base">Processing your order...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-[450px] capitalize mx-auto min-h-screen bg-white text-[#062C0C]">
@@ -132,7 +142,7 @@ const Checkout = () => {
           </div>
         </div>
 
-        <form onSubmit={processOrder} className="space-y-6">
+        <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
           <div className="space-y-2">
             <label className="block text-base">Delivery Address</label>
             <input
@@ -157,30 +167,6 @@ const Checkout = () => {
             />
           </div>
 
-          {/* <div className="space-y-2">
-            <label className="block text-base">Your Order Pin is Your Phone-Number Last 5 Digits</label>
-            <div className="flex items-center gap-3">
-              <div className="flex-1 flex gap-2">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <input
-                    key={i}
-                    type={showPin ? "text" : "password"}
-                    value={phone.replace(/\D/g, '').slice(-5)[i] || ''}
-                    className="flex-1 w-12 h-12 bg-[#E8F5E9] border-0 rounded-lg text-xl text-center"
-                    readOnly
-                  />
-                ))}
-              </div>
-              <button
-                type="button"
-                onClick={() => setShowPin(!showPin)}
-                className="p-2 bg-transparent border-0 cursor-pointer"
-              >
-                {showPin ? <EyeOff className="w-6 h-6 opacity-70" /> : <Eye className="w-6 h-6 opacity-70" />}
-              </button>
-            </div>
-          </div> */}
-
           {error && (
             <div className="text-red-500 text-sm">{error}</div>
           )}
@@ -203,20 +189,12 @@ const Checkout = () => {
           </div>
 
           <div className="flex gap-3 mt-8">
-            {/* <button
-              type="button"
-              
-              className="w-12 h-12 border-2 border-[#60D669] bg-transparent rounded-lg flex items-center justify-center"
-            >
-              <Phone className="w-6 h-6" />
-            </button> */}
             <button
               onClick={openWhatsApp}
               className="flex-1 h-12 bg-[#60D669] text-white border-0 rounded-lg text-base font-semibold"
             >
               CONFIRM ORDER
             </button>
-
           </div>
         </form>
       </main>
