@@ -42,11 +42,11 @@ const page = () => {
     {showMenu && 
      <nav
     className='bg-[#DAF6DC] flex flex-col items-start gap-2 w-3/4 min-h-screen transform translate-x-0 rounded-sm absolute z-[999] right-0 top-[70px]'>
-     <Link href="/components/order-history" onClick={()=>{
+     {/* <Link href="/components/order-history" onClick={()=>{
       setShowMenu(false);
       setChangeIcon(true);
       }}
-      className='hover:bg-[#60D669] w-full p-3 hover:text-white'>Order History</Link>
+      className='hover:bg-[#60D669] w-full p-3 hover:text-white'>Order History</Link> */}
      <Link href="/components/FAQ" onClick={()=>{
       setShowMenu(false);
       setChangeIcon(true);
