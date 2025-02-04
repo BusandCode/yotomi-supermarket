@@ -1,21 +1,16 @@
 "use client"
 
-import React, { useState } from 'react';
-import { BrowserRouter as Router, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronDown, Search, MessageCircle } from 'lucide-react';
 
-// Wrapper component to provide Router context
-const FAQWrapper = () => (
-  <Router>
-    <FAQ />
-  </Router>
-);
-
-// Main FAQ component
 const FAQ = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeItem, setActiveItem] = useState(null);
-  const navigate = useNavigate();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const faqSections = [
     {
@@ -70,16 +65,28 @@ const FAQ = () => {
   };
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/2348038701309', '_blank');
+    if (typeof window !== 'undefined') {
+      window.open('https://wa.me/2348038701309', '_blank');
+    }
   };
 
+  const handleBack = () => {
+    if (typeof window !== 'undefined') {
+      window.history.back();
+    }
+  };
+
+  if (!mounted) {
+    return null; // or a loading spinner
+  }
+
   return (
-    <div className="max-w-[450px] mx-auto flex flex-col  gap-5 h-full">
+    <div className="max-w-[450px] mx-auto flex flex-col gap-5 h-full">
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-4xl mx-auto px-4 py-4 flex items-center">
           <button 
-            onClick={() => navigate(-1)}
+            onClick={handleBack}
             className="p-2 rounded-full hover:bg-gray-100 transition-colors"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -150,4 +157,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQWrapper;
+export default FAQ;
