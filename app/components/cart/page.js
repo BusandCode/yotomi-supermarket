@@ -82,7 +82,7 @@ const page = () => {
 
   return (
     <div className="max-w-[450px] mx-auto flex flex-col bg-white text-[#062C0C]">
-      <header className="bg-white p-2 border-b border-[#E8F5E9]">
+      <header className="bg-white p-2 mb-4 border-b border-[#E8F5E9]">
         <div className="flex items-center gap-4">
           <button onClick={goBack} className="bg-white border-none p-2 cursor-pointer">
             <ChevronLeft className="w-6 h-6" />
@@ -91,7 +91,7 @@ const page = () => {
         </div>
       </header>
 
-      <div className="flex-1 p-5 max-w-xl mx-auto w-full">
+      <div className="flex-1 p-1 max-w-xl mx-auto w-full">
         {cart.length === 0 ? (
           <div className="text-center py-10">
             <img src="/cart-empty.png" alt="Empty Cart" className="mx-auto mb-6" width={200}/>
@@ -104,8 +104,8 @@ const page = () => {
             </button>
           </div>
         ) : (
-          <div className='p-5'>
-            <h2 className="text-xl font-semibold mb-6">Checkout</h2>
+          <div>
+            <h2 className="text-xl font-semibold mb-6 mt-5">Checkout</h2>
             {cart.map((item, index) => (
               <div key={index} className="bg-white max-w-[450px] mx-auto border border-dashed border-[#062C0C] rounded-[4px] p-4 mb-4">
                 <div className="flex flex-col items-start gap-2">
