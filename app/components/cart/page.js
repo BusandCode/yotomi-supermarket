@@ -66,9 +66,9 @@ const page = () => {
     window.location.href = '/components/checkout?type=delivery';
   };
 
-  const openWhatsApp = () => {
-    window.open('https://wa.me/2348038701309', '_blank');
-  };
+  // const openWhatsApp = () => {
+  //   window.open('https://wa.me/2348038701309', '_blank');
+  // };
 
   const goBack = () => {
     window.history.back();
@@ -82,7 +82,7 @@ const page = () => {
 
   return (
     <div className="max-w-[450px] mx-auto flex flex-col bg-white text-[#062C0C]">
-      <header className="bg-white p-5 border-b border-[#E8F5E9]">
+      <header className="bg-white p-2 border-b border-[#E8F5E9]">
         <div className="flex items-center gap-4">
           <button onClick={goBack} className="bg-white border-none p-2 cursor-pointer">
             <ChevronLeft className="w-6 h-6" />
@@ -104,17 +104,17 @@ const page = () => {
             </button>
           </div>
         ) : (
-          <div>
+          <div className='p-5'>
             <h2 className="text-xl font-semibold mb-6">Checkout</h2>
             {cart.map((item, index) => (
-              <div key={index} className="bg-white border border-dashed border-[#062C0C] rounded-xl p-4 mb-4">
-                <div className="mb-4">
-                  <h3 className="text-lg mb-2">{item.name}</h3>
+              <div key={index} className="bg-white max-w-[450px] mx-auto border border-dashed border-[#062C0C] rounded-[4px] p-4 mb-4">
+                <div className="flex flex-col items-start gap-2">
+                  <h3 className="text-[18px] mb-2">{item.name}</h3>
                   <p className="text-gray-600 text-sm">{item.details}</p>
                   <span className="text-[#60D669] font-semibold">₦{(item.price * item.quantity).toLocaleString()}</span>
                 </div>
-                <div className="flex items-center gap-4">
-                  <div className="flex items-center gap-3">
+                <div className="flex items-center gap-1 justify-start">
+                  <div className="flex items-center gap-1">
                     <button
                       onClick={() => updateQuantity(index, -1)}
                       className="w-8 h-8 bg-[#E8F5E9] border-none rounded-md flex items-center justify-center"
@@ -131,7 +131,7 @@ const page = () => {
                   </div>
                   <button
                     onClick={() => duplicateItem(index)}
-                    className="bg-[#E8F5E9] border-none px-4 py-2 rounded-md text-sm"
+                    className="bg-[#E8F5E9] text-[13px] px-3 border-none py-2 rounded-md"
                   >
                     Duplicate pack
                   </button>
@@ -141,7 +141,7 @@ const page = () => {
                   >
                     <Trash2 className="w-5 h-5" />
                   </button>
-                </div>
+                  </div>
               </div>
             ))}
 
@@ -151,12 +151,12 @@ const page = () => {
                 <span>₦{totalPrice.toLocaleString()}</span>
               </div>
               <div className="flex gap-3">
-                <button
+                {/* <button
                   onClick={openWhatsApp}
                   className="w-12 h-12 border-2 border-[#60D669] bg-transparent rounded-lg flex items-center justify-center"
                 >
                   <img src="/whatsapp.png" alt="WhatsApp" />
-                </button>
+                </button> */}
                 <button
                   onClick={proceedToCheckout}
                   className="flex-1 h-12 bg-[#60D669] text-white border-none rounded-lg text-base font-semibold"
